@@ -15,9 +15,7 @@ module.exports = {
   sentVideos: [],
 
   onStart: async function ({ api, event, message }) {
-    try {
-      const loadingMessage = await message.reply("🖤🦇 𝕎𝕒𝕚𝕥 𝕦𝕡, 𝕓𝒶𝒷𝓎... 𝕥𝕙𝕖 𝕟𝕚𝕘𝕙𝕥’𝕤 𝕙𝕠𝕥𝕥𝕖𝕤𝕥 𝕕𝕖𝕤𝕚𝕣𝕖𝕤 𝒶𝓇𝑒 𝕓𝕖𝕚𝕟𝕘 𝕦𝕟𝕝𝕖𝕒𝕤𝕙𝕖𝕕... 🥵💦");
-
+    try
       const videoLinks = [
         "https://drive.google.com/uc?export=download&id=1-gJdG8bxmZLyOC7-6E4A5Hm95Q9gWIPO",
       "https://drive.google.com/uc?export=download&id=1-ryNR8j529EZyTCuMur9wmkFz4ahlv-f",
@@ -79,11 +77,6 @@ module.exports = {
           attachment: await global.utils.downloadFile(videoUrl),
         },
         event.threadID,
-        () => loadingMessage.delete()
+        
       );
-    } catch (error) {
-      message.reply("💀 𝕊𝕠𝕞𝕖𝕥𝕙𝕚𝕟𝕘 𝕓𝕣𝕠𝕜𝕖... 𝕥𝕣𝕪 𝕒𝕘𝕒𝕚𝕟 𝕝𝕒𝕥𝕖𝕣 😋");
-      console.error(error);
-    }
-  },
-};
+ }; ]
